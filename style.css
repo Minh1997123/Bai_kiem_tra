@@ -1,0 +1,25 @@
+/* div{
+    background-color: red ; width: 200px; height: 300px ; margin-left: 200px ; border: 1px solid black;
+} */
+
+.kichthuoc{
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#div1 {
+  background-color: red;
+  
+}
+#div2 {
+  background-color: rgb(111, 0, 255);
+  
+}
+#div3 {
+  background-color: yellow;
+}
+
+.asc{
+    margin-left: 300px ;
+}
