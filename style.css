@@ -1,25 +1,76 @@
-/* div{
-    background-color: red ; width: 200px; height: 300px ; margin-left: 200px ; border: 1px solid black;
-} */
-
-.kichthuoc{
+.kichthuoc {
+    /*kích thước hộp bên trong*/
+    background-color: brown;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+  margin: auto;
+  margin: 20px 20px;
+  }
+  
+  #div1 {
+    /*kích thước hộp bên bên ngoài*/
+    background-color: aqua;
+    height: 90px;
+    width: 280px;
+    margin: auto;
+  }
+  
+  #div5 {
+    /*kích thước hộp bên bên ngoài cùng*/
+    background-color:rgb(190, 214, 213);
+    height: 600px;
+    width: 280px;
+    margin: auto;
+  }
+  #hinhtron {
+  height: 100px;
+  width: 100px;
+    border-radius: 1000px;
+    margin: auto;
+    display: block;
+  }
+  
+  #ten {
+    text-align: center;
+    color:red;
+    margin-bottom: 0px;
+  }
+  
+  #mst {
+    text-align: center;
+    color: rgb(228, 9, 9);
+    margin: 5px 0;
+  }
+  
+  #tencty{
+    text-align: center;
+    color: black;
+    margin-bottom: 0px;
+  
+  }
+  
+  #diachi{
+    text-align: center;
+    color: black;
+  }
+  
+  #lienhe{
+    background-color: rgb(22, 19, 226);
+    height: 50px;
     width: 200px;
-    height: 300px;
-    border: 1px solid black;
-}
-
-#div1 {
-  background-color: red;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center
+  }
   
-}
-#div2 {
-  background-color: rgb(111, 0, 255);
+  #trangweb{
+    background-color: rgb(168, 11, 121);
+    height: 50px;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center
+  }
   
-}
-#div3 {
-  background-color: yellow;
-}
-
-.asc{
-    margin-left: 300px ;
-}
