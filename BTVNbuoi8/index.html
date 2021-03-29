@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      .style1 {
+        text-align: center;
+        margin: 5 0;
+      }
+    </style>
+  </head>
+  <body style="display: flex; justify-content: center; align-items: center">
+    
+    <div
+      style="
+        width: 300px;
+        height: 400px;
+        background-color: aqua;
+        border-radius: 10%;
+      "
+    >
+      <h2 class="style1">Weather</h2>
+      <h3 class="style1" id="status"></h3>
+      <img
+        src="../BTVNbuoi8/icons/01d.png"
+        alt=""
+        style="margin: auto; display: block"
+      />
+      <h2 class="style1" id="temp"></h2>
+      <h2 class="style1" id="description"></h2>
+      <h2 class="style1" id="name"></h2>
+
+      <script>
+        let city = prompt("nhập thành phố")
+        let name = document.getElementById("name"); //kết nối với tên thành phố
+        let description = document.getElementById("description");
+        let temp = document.getElementById("temp");
+        let status = document.getElementById("status");
+        async function getData(city) {
+          let preData = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7674da634845e7c2d8c53ab0a48b8e29`
+          );
+          let data = await preData.json();
+          console.log(data);
+          console.log(data.cod)
+          if ( data.cod == "404" ){
+            alert("không đúng thành phố")
+          }
+          if (Math.floor(data.main.temp - 273.15) < 20) {
+            // tình trạng thời tiết
+            status.textContent = "cold";
+          } else if (20 <= Math.floor(data.main.temp - 273.15 < 30)) {
+            status.textContent = "cool";
+          } else {
+            status.textContent = "hot";
+          }
+          name.textContent = data.name;
+          description.textContent = data.weather[0].description; // miêu tả thời tiết
+          temp.textContent = Math.floor(data.main.temp - 273.15) + "°C"; //do nhiệt độ
+        }
+        getData(city);
+      </script>
+    </div>
+  </body>
+</html>
